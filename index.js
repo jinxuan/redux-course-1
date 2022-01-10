@@ -30,6 +30,13 @@
   id: 0
 }
 
+function todos(state = [], action) {
+  if (action.type === 'ADD_TOTO') {
+    return state.concat([action.todo]); // not push. 
+  }
+  return state;
+}
+
 function createStore () {
   // The store should have four parts
   // 1. The state
